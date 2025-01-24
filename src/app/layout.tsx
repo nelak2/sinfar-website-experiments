@@ -1,6 +1,12 @@
-import "~/styles/globals.css";
+import "~/styles/styles.css";
 
-import { GeistSans } from "geist/font/sans";
+import { Caudex } from "next/font/google";
+
+const caudex = Caudex({
+  weight: '400',
+  display: "swap",
+})
+
 import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
@@ -15,7 +21,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={`${caudex.className}`}>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>

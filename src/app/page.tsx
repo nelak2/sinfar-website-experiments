@@ -1,11 +1,14 @@
-import DevEnvironment from "./dev";
+import SinfarFooter from "./_components/sf-footer";
+import SinfarHeader from "./_components/sf-header";
+import SinfarHome from "./_components/sf-home";
 
 export default async function Home() {
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      
-      <DevEnvironment />
+    <main>
+      <SinfarHeader />
+      <SinfarHome />
+      <SinfarFooter />
     </main>
   );
 }
