@@ -1,0 +1,28 @@
+.headerLeft {
+    width: 25%;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.headerCenter {
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+}
+
+.headerRight {
+    width: 25%;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}

@@ -1,0 +1,54 @@
+.buttonContainer {
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+}
+
+.buttonContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.buttonImg {
+    width: 200px;
+    pointer-events: none;
+}
+
+.buttonText {
+    position: absolute;
+    font-size: 13px;
+    font-family: 'Caudex', serif;
+    color: rgb(192, 182, 138);
+    pointer-events: none;
+}
+
+.spotlightContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    -webkit-mask: url(/img/button-glow.svg) center/80% no-repeat;
+    mask: url(/img/button-glow.svg) center/80% no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    filter: blur(10px);
+    pointer-events: none;
+    scale: 1.02;
+}
+
+.spotlight {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 30%, transparent 60%);
+    filter: contrast(1.2) brightness(2) drop-shadow(10px 10x 10px rgba(255,255,255,1));
+    pointer-events: none;
+    mix-blend-mode: screen;
+}

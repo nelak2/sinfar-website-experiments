@@ -1,0 +1,32 @@
+.mainLogo {
+    width: 100px;
+}
+
+.content {
+    padding-top: 100px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.introText {
+    color: rgb(226, 226, 226);
+    opacity: 0.9;
+    width: 500px;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Caudex', serif;
+    font-weight: normal;
+    font-size: 14px;
+    padding-bottom: 30px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}

@@ -1,14 +1,14 @@
-import SinfarFooter from "./_components/sf-footer";
-import SinfarHeader from "./_components/sf-header";
-import SinfarHome from "./_components/sf-home";
+import SFFooter from "./_components/sf-footer";
+import SFHeader from "./_components/SFHeader/SFHeader";
+import SFHome from "./_components/SFHome/SFHome";
 
 export default async function Home() {
 
   return (
     <main>
-      <SinfarHeader />
-      <SinfarHome />
-      <SinfarFooter />
+      <SFHeader />
+      <SFHome />
+      <SFFooter />
     </main>
   );
 }
