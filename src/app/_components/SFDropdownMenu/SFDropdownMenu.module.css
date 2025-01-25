@@ -24,35 +24,40 @@
   }
 
   .dropdownContentContainer {
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    min-height: 50px;
-    padding: 0;
+    padding: 10px 0 0 0; /* Add padding top to prevent gap */
     margin-top: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    z-index: 100; /* Ensure it's above other content */
   }
 
   .dropdown:hover .dropdownContentContainer {
-    display: block;
-  }
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
 
-  /* Add hover bridge */
-.dropdownContentContainer::before {
+  .dropdownContentContainer::before {
     content: '';
     position: absolute;
-    top: -10px;
+    top: -10px; /* Create invisible bridge */
     left: 0;
     width: 100%;
-    height: 35px;
+    height: 10px;
     background: transparent;
-  }
+}
   
   /* Dropdown Content (Hidden by Default) */
   .dropdownContent {
     display: block;
-    position: absolute;
+    position: relative;
     top: 25px;
 
     padding-top: 20px;
@@ -88,16 +93,6 @@
   /* Change color of dropdown links on hover */
   .dropdownContent a:hover {background-color: rgba(252, 239, 188, 0.2)}
   
-  /* Show the dropdown menu on hover */
-  /* .dropdown:hover .dropdownContent {
-    display: block;
-  } */
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropdownButton {
-    /* background-color: #3e8e41; */
-  }
-
   .dropdownSubMenuHeader {
     font-size: 16px;
     font-weight: bold;
