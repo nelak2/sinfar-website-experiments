@@ -88,13 +88,17 @@
     border-left: rgba(215, 195, 151) 2px solid;
     text-decoration: none;
     display: block;
+
   }
   
   /* Change color of dropdown links on hover */
   .dropdownContent a:hover {background-color: rgba(252, 239, 188, 0.2)}
   
   .dropdownSubMenuHeader {
+    display: block;
     font-size: 16px;
     font-weight: bold;
     color: #D7C397;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
   }
