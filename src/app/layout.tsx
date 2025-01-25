@@ -5,6 +5,7 @@ import { Caudex } from "next/font/google";
 const caudex = Caudex({
   weight: '400',
   display: "swap",
+  subsets: ["latin"],
 })
 
 import { type Metadata } from "next";
