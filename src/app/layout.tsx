@@ -1,5 +1,7 @@
 import "~/styles/styles.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import { Caudex } from "next/font/google";
 
 const caudex = Caudex({
@@ -25,6 +27,7 @@ export default function RootLayout({
     <html lang="en" className={`${caudex.className}`}>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
