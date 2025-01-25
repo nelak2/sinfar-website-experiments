@@ -22,26 +22,28 @@ const SFDropdownMenu: React.FC<SFDropdownMenuProps> = ({ label, items }) => {
   
     return (
       <div className={styles.dropdown}>
-        <button className={styles.dropdownButton}>{label}</button>
-        <div className={styles.dropdownContent}>
-          {isNestedMenu(items) ? (
-            items.map((item, index) => (
-              <div key={index}>
-                <span>{item.label}</span>
-                {item.items.map((subItem, subIndex) => (
-                  <a href="#" key={`${index}-${subIndex}`}>
-                    {subItem}
-                  </a>
-                ))}
-              </div>
-            ))
-          ) : (
-            items.map((item, index) => (
-              <a href="#" key={index}>
-                {item}
-              </a>
-            ))
-          )}
+        <span className={styles.dropdownButton}>{label}</span>
+        <div className={styles.dropdownContentContainer}>
+            <div className={styles.dropdownContent}>
+                {isNestedMenu(items) ? (
+                items.map((item, index) => (
+                    <div key={index}>
+                    <span className={styles.dropdownSubMenuHeader}>{item.label}</span>
+                    {item.items.map((subItem, subIndex) => (
+                        <a href="#" key={`${index}-${subIndex}`}>
+                        {subItem}
+                        </a>
+                    ))}
+                    </div>
+                ))
+                ) : (
+                items.map((item, index) => (
+                    <a href="#" key={index}>
+                    {item}
+                    </a>
+                ))
+                )}
+            </div>
         </div>
       </div>
     );
