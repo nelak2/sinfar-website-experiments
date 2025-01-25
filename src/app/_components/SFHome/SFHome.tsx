@@ -17,7 +17,7 @@ const SFHome = () => {
       <h2>NEVERWINTER NIGHTS ROLEPLAYING SERVER</h2>
       <p className={styles.introText}>
         Discover a world where community is key. Our NWN server is a place where
-        you can connect with like-minded individuals, roleplay to your heart's{" "}
+        you can connect with like-minded individuals, roleplay to your heart&apos;s{" "}
         <br /> content, and create lasting friendships
       </p>
 
